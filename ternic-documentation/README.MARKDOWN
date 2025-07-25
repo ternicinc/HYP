@@ -13,4 +13,17 @@ TernicOS has 2 'modes', one of which is server and the other one is desktop. We 
 since that was the initial goal, me and my team were always pasionated about servers and how they work,
 so this was also for sure something that played along.
 
+# Folder Structure
 
+The folder strucutre of the documentation is made to be fairly simple. Like the source of the operating
+system, the structure is simple and easy to follow. Let's start with a general outline of what we have here,
+and what we still need to do, we will start with a list, on that list, you can see the needed information
+regarding the folder strucutre we maintain here. 
+
+Please keep in mind, it's kind off like BSDs source tree. There is almost no different lookwise, but there
+is a major difference on the inside of the operating system, it is written by another team of developers,
+with other standard when coding.
+
+# Coding Standards
+
+Our coding standards are simple, write everything as simple, clean and readable as we can.
