@@ -136,3 +136,27 @@ struct acl {
  struct acl_entry acl_entry[ACL_MAX_ENTRIES];
 };
 
+struct acl_t_struct {
+ struct acl   ats_acl;
+ int          ats_cur_entry;
+ int          ats_brand;
+};
+typedef struct acl_t_struct *acl_t;
+
+#else 
+
+typedef  void *acl_entry_t;
+typedef  void *acl_t
+
+#endif
+
+
+// Possible valid values for ats_brand field.
+
+#define ACL_BRAND_UNKNOWN 0
+#define ACL_BRAND_POSIX   1
+#define ACL_BRAND_NFS4    2
+
+#define ACL_UNDEFINED_TAG   0x00000000
+
+// TODO; Continue the valid ae_tag field.
