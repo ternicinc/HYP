@@ -42,56 +42,6 @@ typedef __acl_flagset_t       acl_flagset_t;
 
 #if defined(_KERNEL) || defined(_ACL_PRIVATE)
 
-
-
-
-
-
-
-#ifndef _SYS_ACL_H_
-#define _SYS_ACL_H_
-
-#include <sys/types.h> // TODO: Make the system types.
-#include <sys/_null.h> // TODO: Figure this out.
-
-#ifdef _KERNEL
-#include <sys/malloc.h> // TODO; Get a little more information.
-#endif
-
-/* 
-
- TODO: We need to find out and study with the ACL is and does 
- in general, currently, at the point of writing this, i have
- almost no knowledge of this.
-
- FIX: ACL is the security mechansim, which we use to define
- which users or system processes are granted access of objects,
- Objects being files, directories and devices.
- It also checks what operations they are allowed to perform. 
-
- FIX: ACl is essentially a list of permissions attached to an object,
- each entry in the list specifies a subject, like a user groupp or 
- process, and then there is also an allowed or denied access, like
- read, write, execute, delete and more,
-
- FIX; When a user tries to access an obkect, the operating system checks 
- the objects ACL to see of the process user or group has the required 
- permissions. Then it gives access or denies access.
-
-*/
-
-typedef __acl_tag_t           acl_tag_t;
-typedef __acl_perm_t          acl_perm_t;
-typedef __acl_entry_type_t    acl_entry_type_t;
-typedef __acl_flag_t          acl_flag_t;
-typedef __acl_type_t          acl_type_t;
-typedef __acl_permset_t       acl_permset_t;
-typedef __acl_flagset_t       acl_flagset_t;
-
-#define ACL_MAX_ENTRIES       254
-
-#if defined(_KERNEL) || defined(_ACL_PRIVATE)
-
 #define POSIX1E_ACL_ACCESS_EXTATTR_NAMESPACE          EXTATTR_NAMESPACE_SYSTEM
 #define POSIX1E_ACL_ACCESS_EXTATTR_NAME               "posix1e.acl_access"
 #define POSIX1E_ACL_DEFAULT_EXTATTR_NAMESPACE         EXTATTR_NAMESPACE_SYTSEM
