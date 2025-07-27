@@ -108,5 +108,3 @@ typedef  void *acl_t
 #define ACL_BRAND_NFS4    2
 
 #define ACL_UNDEFINED_TAG   0x00000000
-
-// TODO; Continue the valid ae_tag field.
